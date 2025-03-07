@@ -7,11 +7,7 @@ def valid(item1,item2):
 
 string_input=input()
 flag=1
-string_output=""
-mat_to_del=[]
-cnt=0
 while len(string_input)>0 and flag==1:
-    cnt+=1
     flag=0
     for index in range(len(string_input)-1):
         current_simvol=string_input[index]
@@ -20,7 +16,6 @@ while len(string_input)>0 and flag==1:
             string_input=string_input[:index]+"00"+string_input[index+2:]
             flag=1
     string_input=string_input.replace("0","")
-    mat_to_del=[]
     print(string_input)
 if flag==1:
     print(True)
